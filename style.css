@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url(reset.css);
+@import url(./assets/components/login.css);
+@import url(./assets/components/signup.css);
+@import url(./assets/components/header.css);
+@import url(./assets/components/tarefa.css);
+
+
 :root{
-    --roxo-escuro: #909cf9;
+    --roxo-escuro: #6e7deb;
     --roxo: #aab5fb;
     --roxo-claro: #c5cefc;
     --roxo-muito-claro: #dfe6fe;
     --roxo-branco: #f9ffff;
-
 }
 
 body, html{
@@ -16,6 +23,7 @@ body, html{
 
 body{
     background-color: var(--roxo-escuro);
+    font-family: 'Poppins', sans-serif;
 }
 main{
     width: 100%;
@@ -25,7 +33,22 @@ main{
     justify-content: center;
 }
 .cont-desktop{
+    width: 50%;
+    display: flex;
+    height: auto;
     background-color: var(--roxo-muito-claro);
-    width: 60%;
-    height: 200px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cont-texto{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+.tela-login{
+    display: none;
 }

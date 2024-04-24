@@ -1,0 +1,92 @@
+.container-tarefas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px;
+}
+.tarefa{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: var(--roxo-claro);
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.cont-texto-tarefa{
+    padding: 20px;
+    color: var(--roxo-branco);
+}
+.titulo-tarefa{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.adiciona-nova-tarefa{
+    font-size: 50px;
+    font-weight: 700;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    color: var(--roxo-escuro);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--roxo-escuro);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cadastrar-tarefas{
+    background-color: var(--roxo-claro);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: none;
+}
+.cont-input{
+    margin-top: 8px;
+    justify-content: space-between;
+    display: flex;  
+    width: 350px;
+}
+.titulo-cadastrar-tarefa{
+    font-size: 24px;
+    color: var(--roxo-escuro);
+    font-weight: 700;
+}
+.input-cadastrar-tarefa{
+    border: none;
+    padding: 6px;
+}
+.botao-submit{
+    cursor: pointer;
+    margin:16px auto 0 auto;
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: var(--roxo-escuro);
+    color: var(--roxo-branco);
+}
+.botao-submit:hover{
+    transition: 0.2s;
+    background-color: var(--roxo-branco);
+    color: var(--roxo-escuro);
+}
+.sombra{
+    display: none;
+    position: absolute;
+    background-color: black;
+    opacity: 40%;
+    height: 100%;
+    width: 100%;
+}

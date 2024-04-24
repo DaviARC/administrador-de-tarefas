@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--roxo-escuro);
+}
+.titulo-header{
+    color: var(--roxo-escuro);
+    font-weight: 700;
+    font-size: 22px;
+}
+.link-header{
+    font-size: 22px;
+    text-decoration: none;
+    color: var(--roxo-escuro);
+    border-top: 1px solid var(--roxo);
+    border-bottom: 1px solid var(--roxo);
+}
+.cont-tarefas-tela{
+    width: 91%;
+    height: auto;
+    background-color: var(--roxo-muito-claro);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

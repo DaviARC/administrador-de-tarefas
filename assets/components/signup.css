@@ -1,0 +1,37 @@
+.signup{
+    display: flex;
+    flex-direction: column;
+    color: var(--roxo-escuro);
+    width: 60%;
+    padding: 20px;
+    position: relative;
+}
+.titulo-signup{
+    font-size: 22px;
+    font-weight: 700;
+}
+.sub-titulo-signup{
+    font-size: 18px;
+    margin: 16px 0;
+}
+.input{
+    padding:7.5px;
+    margin: 8px 0;
+    border: none;
+}
+.input:focus{
+    outline: none;
+}
+.last{
+    margin-bottom: 25px;
+}
+.button-signup{
+    bottom: 20px;
+    width: 90px;
+    height: 30px;
+    background-color: var(--roxo);
+    color: var(--roxo-branco);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}

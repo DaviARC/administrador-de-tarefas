@@ -5,11 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="style.css" rel="stylesheet">
+    <script src="index.js" type="module" defer></script>
 </head>
 <body>
-    <main>
+    <main class="tela">
         <div class="cont-desktop">
-
+            <div class="login">
+                <div class="cont-texto">
+                    <p class="titulo-login">Bem-vindo de volta</p>
+                    <p class="sub-titulo-login">Acesse sua conta agora mesmo</p>
+                    <button class="button-login" id="mudar-login">Login</button>
+                </div>
+            </div>
+            <div class="signup">
+                <div class="cont-texto">
+                    <p class="titulo-signup">Crie sua conta</p>
+                    <p class="sub-titulo-signup">Cadastre seus dados</p>
+                    <input class="input input-nome" placeholder="Nome" type="text">
+                    <input class="input input-signup" placeholder="Usuário" type="text">
+                    <input class="input input-signup last" type="password" placeholder="Senha">
+                    <button class="button-signup">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main class="tela tela-login">
+        <div class="cont-desktop">
+            <div class="login">
+                <div class="cont-texto">
+                    <p class="titulo-login">Bem-vindo</p>
+                    <p class="sub-titulo-login">Crie sua conta agora mesmo</p>
+                    <button class="button-login" id="mudar-signup">Signup</button>
+                </div>
+            </div>
+            <div class="signup">
+                <div class="cont-texto">
+                    <p class="titulo-signup">Entre em sua conta</p>
+                    <p class="sub-titulo-signup">Insira seus dados</p>
+                    <input class="input input-login" placeholder="Usuário" type="text">
+                    <input class="input input-login last" type="password" placeholder="Senha">
+                    <button class="button-signup" id="button-login">Login</button>
+                </div>
+            </div>
         </div>
     </main>
 </body>

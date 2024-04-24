@@ -1,0 +1,29 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 40%; 
+    background-color: var(--roxo);
+    color: var(--roxo-branco);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.titulo-login{
+    font-size: 22px;
+    font-weight: 700;
+}
+.sub-titulo-login{
+    width: 90%;
+}
+.button-login{
+    bottom: 20px;
+    width: 90px;
+    height: 30px;
+    background-color: var(--roxo-branco);
+    color: var(--roxo);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
