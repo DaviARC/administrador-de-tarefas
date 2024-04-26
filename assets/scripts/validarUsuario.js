@@ -5,15 +5,19 @@ export default async function validarUsuario(){
     const senha = inputsLogin[1].value;
 
     try{
-    const response = await fetch('http://localhost:3000/usuario', {
+    const response = await fetch('http://localhost:3000/login', {
         method:'POST',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({
-            nm_usuario: nome,
-            sen_usuario:senha
+            user: nome,
+            password:senha
     })
     })
-    window.location.href = './tarefas.html';
+    const data = await response.json();
+    localStorage.setItem("Token", data.token);
+    if(data.auth){
+        window.location.href = "./tarefas.html";
+    }
     } 
     catch(e){
         console.log(e);

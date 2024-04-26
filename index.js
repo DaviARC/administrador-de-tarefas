@@ -1,23 +1,41 @@
-import cadastrarUsuario from "./assets/scripts/signup.js";
-import validarUsuario from "./assets/scripts/login.js";
+import requestTarefas from "./assets/scripts/requestTarefas.js";
+import criaTarefa from "./assets/scripts/criaTarefa.js";
+import cadastrarTarefas from "./assets/scripts/cadastrarTarefa.js";
+const containerTarefas = document.querySelector(".container-tarefas");
+const formCadastrarTarefa = document.querySelector(".cadastrar-tarefas")
+const sombra = document.querySelector('.sombra');
+const botaoCadastrarTarefa = document.querySelector(".botao-submit");
+const inputsCadastrarTarefa = document.querySelectorAll(".input-cadastrar-tarefa");
 
-const mudarParaLogin = document.querySelector("#mudar-login");
-const mudarParaSignup = document.querySelector("#mudar-signup");
-const botaoCadastrarUsuario = document.querySelector(".button-signup")
-const botaoValidarUsuario = document.querySelector("#button-login")
+sombra.addEventListener('click', ()=>{
+    formCadastrarTarefa.style.display = "none"
+    sombra.style.display = "none"
+})
+formCadastrarTarefa.addEventListener('submit', e=>{
+    e.preventDefault();
+    console.log(inputsCadastrarTarefa[0].value, inputsCadastrarTarefa[1].value)
+    cadastrarTarefas(inputsCadastrarTarefa[0].value, inputsCadastrarTarefa[1].value);
 
-const telas = document.querySelectorAll(".tela");
-
-mudarParaLogin.addEventListener('click', ()=>{
-    telas[0].style.display = 'none';
-    telas[1].style.display = 'flex';
+    inputsCadastrarTarefa.forEach(input=>input.value="")
+    exibeTarefas();
 })
 
-mudarParaSignup.addEventListener('click', ()=>{
-    telas[1].style.display = 'none';
-    telas[0].style.display = 'flex';
-})
+exibeTarefas();
 
-botaoCadastrarUsuario.addEventListener('click', cadastrarUsuario);
-botaoValidarUsuario.addEventListener('click', validarUsuario)
 
+async function exibeTarefas(){
+    containerTarefas.innerHTML = `<div class="tarefa">
+    <div class="adiciona-nova-tarefa">+</div>
+    </div>`
+
+    const botaoAdicionaNovaTarefa = document.querySelector(".adiciona-nova-tarefa");
+
+    botaoAdicionaNovaTarefa.addEventListener('click', ()=>{
+    formCadastrarTarefa.style.display = "flex"
+    sombra.style.display = "block"
+    })
+    const tarefas = await requestTarefas();
+    tarefas.forEach(tarefa => {
+        containerTarefas.append(criaTarefa(tarefa)); 
+    })
+}

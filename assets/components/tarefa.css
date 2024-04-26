@@ -13,8 +13,6 @@
     border-bottom-left-radius: 40px;
     display: flex;
     flex-direction: column;
-}
-.cont-texto-tarefa{
     padding: 20px;
     color: var(--roxo-branco);
 }
