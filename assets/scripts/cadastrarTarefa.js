@@ -1,7 +1,7 @@
 export default async function cadastrarTarefas(titulo, descricao){
     const response = await fetch('http://localhost:3000/tarefa', {
         method: 'POST',
-        headers: {'x-acess-token': localStorage.getItem("Token"),
+        headers: {'authorization': localStorage.getItem("Token"),
         'Content-Type': 'application/json'},
         body: JSON.stringify({
             tit_tarefa: titulo,

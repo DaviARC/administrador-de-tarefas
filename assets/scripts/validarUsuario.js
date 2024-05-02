@@ -1,8 +1,4 @@
-export default async function validarUsuario(){
-    const inputsLogin = document.querySelectorAll(".input-login")
-
-    const nome = inputsLogin[0].value;
-    const senha = inputsLogin[1].value;
+export default async function validarUsuario(nome,senha){
 
     try{
     const response = await fetch('http://localhost:3000/login', {

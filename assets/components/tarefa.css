@@ -1,26 +1,29 @@
-.container-tarefas{
+.container-tarefas, .container-tarefas-concluidas{
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     margin: 20px;
 }
+.container-tarefas-concluidas{
+    padding-top:20px;
+}
 .tarefa{
     position: relative;
     width: 200px;
-    height: 200px;
+    min-height: 200px;
     background-color: var(--roxo-claro);
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
-    display: flex;
-    flex-direction: column;
     padding: 20px;
     color: var(--roxo-branco);
 }
 .titulo-tarefa{
     font-weight: 700;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
-    
+    align-items: center;
+    font-size: 20px;
 }
 .adiciona-nova-tarefa{
     font-size: 50px;
@@ -51,6 +54,10 @@
     border-bottom-right-radius: 40px;
     display: none;
 }
+.apagar-tarefa{
+    cursor: pointer;
+    width: 34px;
+}
 .cont-input{
     margin-top: 8px;
     justify-content: space-between;
@@ -66,6 +73,9 @@
     border: none;
     padding: 6px;
 }
+.descricao-tarefa{
+    word-wrap: break-word;
+}
 .botao-submit{
     cursor: pointer;
     margin:16px auto 0 auto;
@@ -80,6 +90,9 @@
     background-color: var(--roxo-branco);
     color: var(--roxo-escuro);
 }
+.tarefa-concluida{
+    background-color: var(--verde);
+}
 .sombra{
     display: none;
     position: absolute;
@@ -87,4 +100,15 @@
     opacity: 40%;
     height: 100%;
     width: 100%;
+}
+.cont-icons{
+    display: flex;
+    align-items: center;
+}
+.icone-no-checked, .icone-checked{
+    width: 30px;
+    cursor: pointer;
+}
+.container-tarefas-concluidas{
+    border-top: 1px solid var(--roxo);
 }

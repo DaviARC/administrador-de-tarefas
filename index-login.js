@@ -20,6 +20,7 @@ mudarParaSignup.addEventListener('click', ()=>{
 
 botaoCadastrarUsuario.addEventListener('click', cadastrarUsuario);
 botaoValidarUsuario.addEventListener('click',async ()=>{
-    await validarUsuario();
+    const inputsLogin = document.querySelectorAll(".input-login")
+    await validarUsuario(inputsLogin[0].value,inputsLogin[1].value);
 })
 
